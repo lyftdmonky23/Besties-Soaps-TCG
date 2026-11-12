@@ -74,3 +74,276 @@
       margin: 0.25rem;
     }
     .btn-outline {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .sec-title { text-align: center; margin-bottom: 2rem; }
+    .sec-title h2 { font-size: 1.9rem; margin-bottom: 0.4rem; }
+    .sec-title p { color: var(--text-muted); }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+    }
+    .card h3 { margin-bottom: 0.5rem; font-size: 1.15rem; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+    .tag {
+      display: inline-block;
+      margin-top: 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      background: rgba(249, 115, 22, 0.15);
+      color: #fb923c;
+    }
+
+    .mica-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .mica-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 auto 0.6rem;
+      border: 2px solid rgba(255,255,255,0.25);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.9rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: #162032; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; }
+
+    .craft-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.35rem; text-transform: uppercase; }
+    select {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 8px;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    .recipe-out {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .recipe-out ul { list-style: none; display: grid; gap: 0.6rem; margin-top: 0.75rem; }
+    .recipe-out li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 0.45rem;
+    }
+    .recipe-out li:last-child { border-bottom: none; }
+    .result-bar {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+      background: rgba(45, 212, 191, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.35);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="brand">Besties <span>Soaps TCG</span></div>
+      <ul class="nav-links">
+        <li><a href="#assets">Core NFTs</a></li>
+        <li><a href="#molds">Mold Upgrades</a></li>
+        <li><a href="#crafting">Blend Simulator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="badge">WAX Blockchain • Besties Gone Crafty Boutique</div>
+    <h1>Craft Artisanal Soap NFTs On-Chain</h1>
+    <p>
+      Collect your <strong>Aloe Vera M&amp;P Base</strong>, vibrant <strong>Mica Powders</strong>, and <strong>Melting Pot</strong>, upgrade your <strong>Soap Molds</strong> to scale batch capacity, and pour single-color soap bars on Mintyblocks. Every NFT used in a blend is permanently burned upon use!
+    </p>
+    <a href="#crafting" class="btn">Try Blend Simulator</a>
+    <a href="#assets" class="btn btn-outline">Explore Core Cards</a>
+  </div>
+
+  <section id="assets">
+    <div class="sec-title">
+      <h2>Core Studio NFTs</h2>
+      <p>Every soap bar in Besties Soaps TCG is crafted using four streamlined asset types—all burned upon crafting.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Melting Pot</h3>
+        <p>Your essential studio heating vessel. Required in every blend recipe to melt down your aloe base and infuse mica pigment.</p>
+        <span class="tag">Utility • Burned Upon Use</span>
+      </div>
+      <div class="card">
+        <h3>Soap Molds</h3>
+        <p>Determines how many bars you pour per batch. Start with a 1-Bar Mold and combine them to unlock higher-capacity molds.</p>
+        <span class="tag">Capacity • Burned Upon Use</span>
+      </div>
+      <div class="card">
+        <h3>Aloe Vera M&amp;P Base</h3>
+        <p>The soothing foundational soap base. Every single soap bar crafted requires 1x Aloe Vera Melt &amp; Pour Base NFT.</p>
+        <span class="tag">Ingredient • Burned (1 per Bar)</span>
+      </div>
+    </div>
+
+    <div class="mica-grid">
+      <div class="mica-card"><div class="dot" style="background:#ef4444;"></div><h4>Red Mica</h4></div>
+      <div class="mica-card"><div class="dot" style="background:#f97316;"></div><h4>Orange Mica</h4></div>
+      <div class="mica-card"><div class="dot" style="background:#eab308;"></div><h4>Yellow Mica</h4></div>
+      <div class="mica-card"><div class="dot" style="background:#22c55e;"></div><h4>Green Mica</h4></div>
+      <div class="mica-card"><div class="dot" style="background:#3b82f6;"></div><h4>Blue Mica</h4></div>
+      <div class="mica-card"><div class="dot" style="background:#a855f7;"></div><h4>Purple Mica</h4></div>
+    </div>
+  </section>
+
+  <section id="molds">
+    <div class="sec-title">
+      <h2>Mold Upgrade Progression</h2>
+      <p>Combine lower-tier molds to unlock larger batch production. All molds used in upgrades or crafting are burned upon use.</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Mold Tier</th>
+          <th>Upgrade Recipe (Burned)</th>
+          <th>Batch Output</th>
+          <th>Rule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1-Bar Single Mold</strong></td><td>Starter / Pack Drop</td><td>1 Soap Bar</td><td>Single-color pour</td></tr>
+        <tr><td><strong>3-Bar Trio Mold</strong></td><td>3x 1-Bar Single Molds</td><td>3 Soap Bars</td><td>Single-color batch</td></tr>
+        <tr><td><strong>6-Bar Loaf Mold</strong></td><td>2x 3-Bar Trio Molds</td><td>6 Soap Bars</td><td>Single-color batch</td></tr>
+        <tr><td><strong>12-Bar Master Slab</strong></td><td>2x 6-Bar Loaf Molds</td><td>12 Soap Bars</td><td>Max batch efficiency</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="crafting">
+    <div class="sec-title">
+      <h2>Mintyblocks Blend Simulator</h2>
+      <p>Select your mold tier and single mica color to preview the exact recipe. All inputs are burned upon blending.</p>
+    </div>
+    <div class="craft-box">
+      <div class="controls">
+        <div>
+          <label for="moldSelect">1. Choose Mold Tier</label>
+          <select id="moldSelect" onchange="updateRecipe()">
+            <option value="1">1-Bar Single Mold (1 Bar)</option>
+            <option value="3">3-Bar Trio Mold (3 Bars)</option>
+            <option value="6">6-Bar Loaf Mold (6 Bars)</option>
+            <option value="12">12-Bar Master Slab (12 Bars)</option>
+          </select>
+        </div>
+        <div>
+          <label for="colorSelect">2. Choose Mica Color</label>
+          <select id="colorSelect" onchange="updateRecipe()">
+            <option value="Red">Red Mica Powder</option>
+            <option value="Orange">Orange Mica Powder</option>
+            <option value="Yellow">Yellow Mica Powder</option>
+            <option value="Green">Green Mica Powder</option>
+            <option value="Blue">Blue Mica Powder</option>
+            <option value="Purple">Purple Mica Powder</option>
+          </select>
+        </div>
+      </div>
+      <div class="recipe-out">
+        <strong style="color:var(--accent);">Required Blend Inputs:</strong>
+        <ul id="recipeList"></ul>
+        <div class="result-bar" id="resultBanner"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Besties Soaps TCG</strong> • A WAX Blockchain Project by <strong>Besties Gone Crafty Boutique</strong></p>
+  </footer>
+
+  <script>
+    function updateRecipe() {
+      const count = parseInt(document.getElementById("moldSelect").value, 10);
+      const color = document.getElementById("colorSelect").value;
+      const molds = {
+        1: "1-Bar Single Mold",
+        3: "3-Bar Trio Mold",
+        6: "6-Bar Loaf Mold",
+        12: "12-Bar Master Slab"
+      };
+      document.getElementById("recipeList").innerHTML =
+        "<li><span><strong>1x</strong> Melting Pot NFT</span><span style='color:#f87171;'>Burned</span></li>" +
+        "<li><span><strong>1x</strong> " + molds[count] + " NFT</span><span style='color:#f87171;'>Burned</span></li>" +
+        "<li><span><strong>" + count + "x</strong> Aloe Vera M&amp;P Base NFT</span><span style='color:#f87171;'>Burned</span></li>" +
+        "<li><span><strong>" + count + "x</strong> " + color + " Mica Powder NFT</span><span style='color:#f87171;'>Burned</span></li>";
+      document.getElementById("resultBanner").innerHTML =
+        "Output: <strong>" + count + "x " + color + " Aloe Soap " + (count === 1 ? "Bar" : "Bars") + "</strong>";
+    }
+    updateRecipe();
+  </script>
+</body>
+</html>
